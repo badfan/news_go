@@ -1,0 +1,20 @@
+{{ define "show_article" }}
+
+{{ template "header" }}
+
+<main class="px-3">
+
+    <h1>{{ .Anon }}</h1>
+    <p class="lead">{{ .FullText }}</p>
+
+    <p class="lead">
+    <form action="/delete_article" method="post">
+        <a href="/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Go back</a>
+        <button class="btn btn-lg btn-secondary fw-bold border-white bg-white">Delete article</button>
+    </form>
+    </p>
+</main>
+
+{{ template "footer" }}
+
+{{ end }}
